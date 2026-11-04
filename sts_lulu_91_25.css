@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(10, 25, 47, 0.4), rgba(12, 13, 17, 0.95)),
+                url(4632386.jpg) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 60px 80px;
+}
+
+/* Navbar */
+.navbar {
+    background: #fa90e3;
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-brand {
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    color: white;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.search-icon {
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.header {
+    width: 100%;
+    padding: 20px;
+    background-color: #fa90e3;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header h1 {
+    margin: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.topnav {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fa90e3;
+    border-top: 1px solid rgba(255,255,255,0.35);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.topnav a {
+    display: block;
+    padding: 14px 16px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+}
+
+.page-header {
+    padding: 30px 60px 0;
+}
+
+.footer {
+    width: 100%;
+    background-color: #fa90e3;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    border: none;
+}
+
+/* Hero Center & Indicators */
+.hero-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #10ff3f, #d6ff21);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "singsong";
+}
+
+/* Hero Descriptions */
+.hero-desc-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin-top: 10px;
+}
+
+/* Base state */
+.hero-desc-container p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #b2f7b2;
+  max-width: 450px;
+  text-align: justify;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: box-shadow 0.3s ease, background 0.3s ease, transform 0.3s ease, max-width 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover state */
+.hero-desc-container p:hover {
+  max-width: 600px;
+  background: rgba(255, 148, 237, 0.863);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 92, 187, 0.954);
+  box-shadow: 0 12px 30px rgb(255, 252, 66), 0 0 15px rgba(71, 147, 184, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ---------------- FILTER BAR ---------------- */
+/* Filter Wrapper & Bar */
+.filter-wrapper {
+display: flex;
+justify-content: center;
+margin: -25px auto 40px;
+position: relative;
+z-index: 10;
+width: 100%;
+max-width: 850px;
+}
+
+.filter-bar {
+display: flex;
+background: #ffffff;
+border-radius: 35px;
+overflow: hidden;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+width: 100%;
+align-items: stretch;
+}
+
+/* Individual Dropdown Item */
+.filter-item.select-group {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 10px 18px;
+border-right: 1px solid #e5e7eb;
+}
+
+.filter-item.select-group label {
+font-size: 9px;
+font-weight: 800;
+color: #888;
+letter-spacing: 0.8px;
+margin-bottom: 2px;
+text-transform: uppercase;
+}
+
+/* Dropdown styling */
+.filter-item select {
+width: 100%;
+border: none;
+background: transparent;
+font-size: 11px;
+font-weight: 700;
+color: #111;
+cursor: pointer;
+outline: none;
+font-family: inherit;
+padding: 2px 0;
+}
+
+.filter-item select option {
+color: #222;
+font-weight: 500;
+background: #fff;
+}
+
+/* Button */
+.filter-btn {
+background: #ff78b7;
+color: #fff;
+border: none;
+padding: 14px 28px;
+font-size: 10px;
+font-weight: 800;
+letter-spacing: 1px;
+text-transform: uppercase;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+line-height: 1.2;
+transition: background 0.3s;
+}
+
+.filter-btn:hover {
+background: #8ff89a;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 900px) {
+.filter-wrapper {
+    width: 90%;
+}
+.filter-bar {
+    flex-direction: column;
+    border-radius: 12px;
+}
+.filter-item.select-group {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px 16px;
+}
+}
+
+/* ---------------- GALLERY / CARDS SECTION ---------------- */
+.destinations {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.card-image-box {
+    width: 100%;
+    height: 250px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image-box img {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/* ---------------- FEATURE / SECOND HERO SECTION ---------------- */
+.feature-section {
+    position: relative;
+    min-height: 90vh;
+    background: linear-gradient(to right, rgba(12, 13, 17, 0.95) 0%, rgba(12, 13, 17, 0.4) 50%, rgba(12, 13, 17, 0.8) 100%),
+                url(labuan-bajosunset.jpg) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 60px 80px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+}
+
+.feature-content {
+    max-width: 500px;
+}
+
+.feature-title {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.05;
+    background: linear-gradient(to bottom, #ff3452, #d6ff21);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-family: "Waffles";
+}
+
+.feature-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #83ff89;
+    text-align: justify;
+    padding:10px;
+    border-radius: 10px;
+}
+
+/* Hover state */
+.feature-desc:hover {
+  max-width: 600px;
+  background: rgba(255, 148, 237, 0.863);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 92, 187, 0.954);
+  box-shadow: 0 12px 30px rgb(255, 252, 66), 0 0 15px rgba(71, 147, 184, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Feature Media Play Cards */
+.feature-media {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.media-card {
+    position: relative;
+    width: 320px;
+    height: 140px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.media-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-icon {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #ffffff;
+    margin-left: 2px;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    background-color: #fa90e3;
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+    .hero { padding: 20px; }
+    .hero-title { font-size: 46px; }
+    .hero-desc-container { flex-direction: column; gap: 20px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .feature-container { flex-direction: column; text-align: left; }
+    .feature-title { font-size: 38px; }
+    .filter-wrapper { width: 90%; }
+    .filter-bar { flex-direction: column; border-radius: 12px; }
+    .filter-item { border-right: none; border-bottom: 1px solid #e5e7eb; }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+#flowerCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@font-face {
+    font-family: "singsong";
+    src: url(Singsong.otf);
+}
+
+@font-face {
+    font-family: "valentina";
+    src: url(Hello\ Valentina.ttf);
+}
+
+#mutiara{
+    font-family: 'valentina';
+    text-transform: lowercase;
+    font-size: 100px;
+}
+
+@font-face {
+    font-family: "Waffles";
+    src: url(Super\ Waffles.ttf);
+}
+
+#Waffle{
+    font-family: 'valentina';
+    text-transform: lowercase;
+    font-size: 100px;
+}

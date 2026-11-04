@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUGAS TIK</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sts_lulu_91_25.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body class="about-page">
+  <div class="header">
+    <h1>TUGAS HTML & CSS</h1>
+  </div>
+  <div class="topnav">
+    <a href="index.html">BIODATA</a>
+    <a href="table.html">TABLE</a>
+    <a href="list.html">LIST</a>
+    <a href="sts_lulu_91_25.html">STS</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="about-header">
+    <nav class="navbar">
+      <div class="nav-brand">Lulu's Travel Agency</div>
+      <ul class="nav-links">
+        <li class="search-icon">🔍︎</li>
+        <li><a href="sts_lulu_91_25.html">HOME</a></li>
+        <li><a href="about.html" class="active-link">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="rate.html">RATE US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN ABOUT SECTION (2-Column Flex Layout) -->
+  <main class="about-container">
+    
+    <!-- LEFT SIDE: 2 Stacked Flex Boxes -->
+    <section class="about-left">
+      <!-- 1. Upper Left Box: Title -->
+      <div class="about-box title-box">
+        <span class="sub-heading">EXPLORE </span>
+        <h1 class="about-main-title">LABUAN BAJO</h1>
+      </div>
+
+      <!-- 2. Lower Left Box: Description -->
+      <div class="about-box desc-box">
+        <p>
+          Labuan Bajo is the adventurous gateway to Komodo National Park, where ancient dragons roam wild islands and sunsets paint the sea in gold. Once a quiet fishing village on Flores, it’s now a buzzing hub for divers, explorers, and dreamers chasing pink beaches, hidden caves, and some of the best underwater worlds on Earth. From sailing between jagged karst islands to diving with manta rays and trekking to panoramic viewpoints, Labuan Bajo blends raw nature with a laid-back island vibe that makes every visit feel like a real-life adventure.
+        </p>
+      </div>
+    </section>
+
+    <!-- RIGHT SIDE: 1 Big Flex Box with Interactive Image Gallery -->
+    <section class="about-right">
+      <div class="slider-box">
+        <img id="gallery-img" src="4632386.jpg" alt="Travel Destination">
+        
+        <!-- Controls Overlay -->
+        <div class="slider-controls">
+          <button id="prevBtn" class="nav-arrow-btn" type="button">&#10094;</button>
+          <span id="slideCounter" class="slide-count">01 / 03</span>
+          <button id="nextBtn" class="nav-arrow-btn" type="button">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JAVASCRIPT FOR IMAGE SWITCHER -->
+  <script>
+    const images = [
+      "idk1.jpg", // Labuan Bajo
+      "idk2.jpg", // Bromo Volcano
+      "idk3.jpg"  // Rinjani
+    ];
+
+    let currentIndex = 0;
+    const imgElement = document.getElementById("gallery-img");
+    const counterElement = document.getElementById("slideCounter");
+
+    function updateImage(index) {
+      imgElement.src = images[index];
+      counterElement.textContent = `0${index + 1} / 0${images.length}`;
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImage(currentIndex);
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateImage(currentIndex);
+    });
+  </script>
+<!--Membuat Footer-->
+  <footer class="footer">
+    <p>Louisa Evelyn</p>
+  </footer>
+</body>
+</html>

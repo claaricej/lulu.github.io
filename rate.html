@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Us - Lulu's Travel Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sts_lulu_91_25.css">
+  <link rel="stylesheet" href="contact-and-rate.css">
+</head>
+<body class="page-wrapper" id="ratingbox">
+  <div class="header">
+    <h1>TUGAS HTML & CSS</h1>
+  </div>
+  <div class="topnav">
+    <a href="index.html">BIODATA</a>
+    <a href="table.html">TABLE</a>
+    <a href="list.html">LIST</a>
+    <a href="sts_lulu_91_25.html">STS</a>
+  </div>
+  <!-- NAVBAR -->
+  <header class="page-header">
+    <nav class="navbar">
+      <div class="nav-brand">Lulu's Travel Agency</div>
+      <ul class="nav-links">
+        <li class="search-icon">🔍︎</li>
+        <li><a href="sts_lulu_91_25.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="rate.html" class="active-link">RATE US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- RATE US SECTION (Single Flex Box) -->
+  <main class="center-content-container">
+    <div class="rate-box">
+      <span class="sub-heading">YOUR FEEDBACK</span>
+      <h1 class="box-title">RATE YOUR EXPERIENCE</h1>
+      <p class="rate-intro">
+        How was your adventure with us? Tap a star to submit your review score.
+      </p>
+
+      <!-- Pure CSS Interactive Star Rating -->
+      <div class="star-rating">
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5" title="5 stars">&#9733;</label>
+
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4" title="4 stars">&#9733;</label>
+
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3" title="3 stars">&#9733;</label>
+
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2" title="2 stars">&#9733;</label>
+
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1" title="1 star">&#9733;</label>
+      </div>
+
+      <button class="submit-rate-btn" type="button">SUBMIT REVIEW</button>
+    </div>
+  </main>
+
+<!--Membuat Footer-->
+        <footer class="footer">
+            <p>Louisa Evelyn</p>
+        </footer>
+</body>
+</html>

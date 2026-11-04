@@ -1,0 +1,180 @@
+/* =========================================
+   CONTACT & RATE SHARED STYLES
+   ========================================= */
+
+.page-wrapper {
+  background-image: url(bggg.jpg);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+}
+
+.page-header {
+  padding: 30px 60px 0;
+}
+
+/* Center Wrapper for single flex boxes */
+.center-content-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+
+/* Base Card Box */
+.contact-box,
+.rate-box {
+  background-image: url(polka.jpg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  padding: 50px;
+  max-width: 580px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(209, 21, 112);
+}
+
+
+.box-title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: 10px 0 15px;
+}
+
+.contact-intro,
+.rate-intro {
+  font-size: 12px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Contact List */
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.contact-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: rgba(247, 165, 214, 0.966);
+  border: 10px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-entry:hover {
+  transform: translateY(-2px);
+  border-color: rgba(71, 147, 184, 0.4);
+}
+
+.entry-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.entry-value {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.entry-value:hover {
+  color: #4793b8;
+}
+
+/* =========================================
+   INTERACTIVE STAR RATING (Pure CSS)
+   ========================================= */
+
+.star-rating {
+  display: inline-flex;
+  flex-direction: row-reverse; /* Reverses sequence so sibling hover fills backwards */
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 46px;
+  color: #333a42;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover effect on star and preceding stars */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #f6c845;
+  transform: scale(1.15);
+}
+
+/* Checked/Selected state */
+.star-rating input:checked ~ label {
+  color: #f6c845;
+}
+
+/* Submit Review Button */
+.submit-rate-btn {
+  background: #4793b8;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 36px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-rate-btn:hover {
+  background: #367391;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .page-header {
+    padding: 20px 20px 0;
+  }
+  .contact-box,
+  .rate-box {
+    padding: 30px 20px;
+  }
+  .box-title {
+    font-size: 24px;
+  }
+  .contact-entry {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+  .star-rating label {
+    font-size: 36px;
+  }
+}
+
+#ratingbox{
+  background-image: url(monkey.jpg);
+}

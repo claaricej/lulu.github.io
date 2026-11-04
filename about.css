@@ -1,0 +1,179 @@
+/* =========================================
+   ABOUT PAGE SPECIFIC STYLES
+   ========================================= */
+
+
+@font-face {
+    font-family: "Butter";
+    src: url("Butterpop.ttf");
+}
+
+.about-page {
+  background-image: url(bgg.jpg);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-header {
+  padding: 30px 60px 0;
+}
+
+.active-link {
+  color: #fff !important;
+  border-bottom: 2px solid #4793b8;
+  padding-bottom: 4px;
+}
+
+/* Main Two-Column Flex Container */
+.about-container {
+  display: flex;
+  flex: 1;
+  gap: 40px;
+  padding: 40px 60px 60px;
+  align-items: stretch;
+}
+
+/* LEFT COLUMN (Contains 2 Stacked Flex Boxes) */
+.about-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  color: brown;
+}
+
+.about-box {
+  background-image: url(bg.jpg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 40px;
+  backdrop-filter: blur(8px);
+  border: 7px solid pink;
+}
+
+.about-box:hover {
+  max-width: 600px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 30px rgb(255, 252, 66), 0 0 15px rgba(71, 147, 184, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Upper Left: Title Box */
+.title-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sub-heading {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #0f6c07;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.about-main-title {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  font-family: "Butter";
+}
+
+/* Lower Left: Description Box */
+.desc-box {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.desc-box p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: brown;
+  text-align: justify;
+  font-weight: bolder;
+}
+
+/* RIGHT COLUMN (1 Big Flex Box with Slider) */
+.about-right {
+  flex: 1.2;
+  display: flex;
+}
+
+.slider-box {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.slider-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+  max-width: 600px;
+  max-height: 550px;
+}
+
+/* Slider Bottom Floating Overlay */
+.slider-controls {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(12, 13, 17, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 10px 18px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.nav-arrow-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.nav-arrow-btn:hover {
+  color: #4793b8;
+  transform: scale(1.2);
+}
+
+.slide-count {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 900px) {
+  .about-header {
+    padding: 20px 20px 0;
+  }
+  .about-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .slider-box {
+    min-height: 350px;
+  }
+}

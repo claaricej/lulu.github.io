@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Biodata diri</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="biodata.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>TUGAS HTML & CSS</h1>
+        </div>
+        <div class="topnav">
+            <a href="index.html">BIODATA</a>
+            <a href="table.html">TABLE</a>
+            <a href="list.html">LIST</a>
+            <a href="sts_lulu_91_25.html">STS</a>
+        </div>
+         <canvas id="flowerCanvas"></canvas>
+
+        <div>
+            <h2>selamat datang di Web pertama saya</h2>
+        </div>
+        
+        <div class="BIODATADIRI_heading">
+            <div class="biohead_item" id="biolulu">
+                <h1>BIODATA</h1>
+            </div>
+            <div class="biohead_item" id="biodiri">
+                <h1>DIRI</h1>
+            </div>
+        </div>
+
+       <div class="biodata">
+            <div class="content">
+                    <div class="foto-hover">
+                        <!-- Empty container for the image, the image source is in the biodata.css style sheet -->
+                    </div>
+
+                    <div class="isi">
+                        <p>Nama lengkap: Louisa Evelyn Soetanto</p>
+                        <p>Tanggal Lahir: <b>16 April 2012</b></p>
+                        <p>Tempat Lahir: Jakarta</p>
+                        <p>Alamat: Jakarta Garden City, F 121</p>
+                        <p>Email: @evelilin121612@gmail.com</p>
+                        <p>Hobi: Bermain Piano dan Membaca buku</p>
+                        <p>Motto: "Do the best and let God do the rest"</p>
+                        <p>Pesan: "Always be a good person as long as you live"</p>
+                    </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>Lulu's favourite foods</h2>
+        </div>
+
+        <div class="foodcontainer">
+            <div class="food">
+                <div class="food-item">
+                    <img src="sushi1.jpeg" alt="">
+                        <div class="overlay-text">
+                            <p>Sushi</p>
+                        </div>
+                </div>
+                <div class="food-item"><img src="nasipadangg.jpg" alt="">
+                    <div class="overlay-text">
+                        <p>Nasi Padang</p>
+                    </div>
+                </div>
+                <div class="food-item"><img src="cheesecake1.jpg" alt="">
+                    <div class="overlay-text">
+                        <p>Cheese cake</p>
+                    </div>
+                </div>
+                <div class="food-item"><img src="Dubaichewycookie1.webp" alt="">
+                    <div class="overlay-text">
+                        <p>Dubai Chewy Cookie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>Lulu's favourite drinks</h2>
+        </div>
+
+        <div class="drinkcontainer">
+            <div class="drink">
+                <div class="drink-item"><img src="mollytea1.jpg" alt="">
+                    <div class="overlay-text2">
+                        <p>Molly Tea</p>
+                    </div>
+                </div>
+                <div class="drink-item"><img src="chagee.jpg" alt="">
+                <div class="overlay-text2">
+                        <p>Chagee</p>
+                    </div></div>
+                <div class="drink-item"><img src="teazzi.jpg" alt="">
+                    <div class="overlay-text2">
+                        <p>Teazzi</p>
+                    </div>
+                </div>
+                <div class="drink-item"><img src="espodeng.jpeg" alt="">
+                    <div class="overlay-text2">
+                        <p>Es Podeng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>Lulu's Hobbies</h2>
+        </div>
+
+         <div class="hobbycontainer">
+            <div class="hobby">
+                <div class="hobby-item"><img src="piano.JPG" alt="">
+                    <div class="overlay-text3">
+                        <p>Piano</p>
+                    </div>
+                </div>
+                <div class="hobby-item"><img src="singing.jpeg" alt="">
+                <div class="overlay-text3">
+                        <p>Singing</p>
+                    </div></div>
+                <div class="hobby-item"><img src="reading.jpg" alt="">
+                    <div class="overlay-text3">
+                        <p>Reading</p>
+                    </div>
+                </div>
+                <div class="hobby-item"><img src="drawing.jpeg" alt="">
+                    <div class="overlay-text3">
+                        <p>Drawing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>Lulu's Fav Songs</h2>
+        </div>
+
+        <div class="songscontainer">
+            <div class="songs">
+
+                <!-- SONG 1 -->
+                <div class="songs-border">
+
+                    <div class="songs-item">
+                        <img src="ablum cover 1.jpg" alt="Everything Has Changed">
+                    </div>
+
+                    <div class="songs-name">
+                        <h1>Everything Has Changed</h1>
+                        <h4>Taylor Swift</h4>
+                    </div>
+
+                    <audio id="song1">
+                        <source src="Everything Has Changed.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <div class="song-controls">
+
+                        <div class="progress-container">
+                            <span class="current-time" id="current1">0:00</span>
+
+                            <input 
+                                type="range" 
+                                class="progress-bar" 
+                                id="progress1"
+                                value="0"
+                                min="0"
+                                max="100"
+                            >
+
+                            <span class="duration" id="duration1">0:00</span>
+                        </div>
+
+                        <button class="play-button" onclick="playMusic('song1', this)">
+                            ▶
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SONG 2 -->
+                <div class="songs-border">
+
+                    <div class="songs-item">
+                        <img src="Cry_baby_cover.webp" alt="Training Wheels">
+                    </div>
+
+                    <div class="songs-name">
+                        <h1>Training Wheels</h1>
+                        <h4>Melanie Martinez</h4>
+                    </div>
+
+                    <audio id="song2">
+                        <source src="Training Wheels.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <div class="song-controls">
+
+                        <div class="progress-container">
+                            <span class="current-time" id="current2">0:00</span>
+
+                            <input 
+                                type="range" 
+                                class="progress-bar" 
+                                id="progress2"
+                                value="0"
+                                min="0"
+                                max="100"
+                            >
+
+                            <span class="duration" id="duration2">0:00</span>
+                        </div>
+
+                        <button class="play-button" onclick="playMusic('song2', this)">
+                            ▶
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <p>Louisa Evelyn</p>
+        </footer>
+    </body>
+
+    <script>
+        const canvas = document.getElementById('flowerCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const TOTAL_FLOWERS = 40;
+        const flowerArray = [];
+
+        function drawPetal(ctx, x, y, size, angle) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(angle);
+            ctx.beginPath();
+            ctx.fillStyle = '#FF78D6'; // Soft pastel sky blue
+            
+            for (let i = 0; i < 5; i++) {
+                ctx.rotate(Math.PI * 2 / 5);
+                ctx.moveTo(0, 0);
+                ctx.bezierCurveTo(-size, -size * 1.5, size, -size * 1.5, 0, 0);
+            }
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(0, 0, size * 0.2, 0, Math.PI * 2);
+            ctx.fillStyle = '#bae6fd'; // Light center highlight
+            ctx.fill();
+            
+            ctx.restore();
+        }
+
+        class Flower {
+            constructor() {
+                this.reset();
+                this.y = Math.random() * canvas.height;
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = -20;
+                this.size = Math.random() * 8 + 6;
+                this.speedY = Math.random() * 1.5 + 1;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.angle = Math.random() * Math.PI * 2;
+                this.spinSpeed = Math.random() * 0.02 - 0.01;
+            }
+
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                this.angle += this.spinSpeed;
+
+                if (this.y > canvas.height + 20 || this.x < -20 || this.x > canvas.width + 20) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                drawPetal(ctx, this.x, this.y, this.size, this.angle);
+            }
+        }
+
+        for (let i = 0; i < TOTAL_FLOWERS; i++) {
+            flowerArray.push(new Flower());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            flowerArray.forEach(flower => {
+                flower.update();
+                flower.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Function to play the songs
+        function formatTime(seconds) {
+
+            if (isNaN(seconds)) {
+                return "0:00";
+            }
+
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = Math.floor(seconds % 60);
+
+            return minutes + ":" +
+                (remainingSeconds < 10 ? "0" : "") +
+                remainingSeconds;
+        }
+
+
+        function playMusic(songId, button) {
+
+            const song = document.getElementById(songId);
+
+            /*
+                Stop all other songs
+            */
+
+            document.querySelectorAll("audio").forEach(otherSong => {
+
+                if (otherSong !== song) {
+
+                    otherSong.pause();
+                    otherSong.currentTime = 0;
+
+                    const otherButton =
+                        document.querySelector(
+                            `.play-button[onclick*="${otherSong.id}"]`
+                        );
+
+                    if (otherButton) {
+                        otherButton.innerHTML = "▶";
+                    }
+
+                }
+
+            });
+
+
+            /*
+                Play / pause selected song
+            */
+
+            if (song.paused) {
+
+                song.play();
+
+                button.innerHTML = "❚❚";
+
+            } else {
+
+                song.pause();
+
+                button.innerHTML = "▶";
+
+            }
+
+        }
+
+
+        /*
+            Set up each song
+        */
+
+        document.querySelectorAll("audio").forEach(song => {
+
+            const number = song.id.replace("song", "");
+
+            const progress =
+                document.getElementById("progress" + number);
+
+            const currentTime =
+                document.getElementById("current" + number);
+
+            const duration =
+                document.getElementById("duration" + number);
+
+
+            /*
+                Get total duration
+            */
+
+            song.addEventListener("loadedmetadata", function() {
+
+                duration.textContent =
+                    formatTime(song.duration);
+
+            });
+
+
+            /*
+                Update progress while playing
+            */
+
+            song.addEventListener("timeupdate", function() {
+
+                if (song.duration) {
+
+                    progress.value =
+                        (song.currentTime / song.duration) * 100;
+
+                }
+
+                currentTime.textContent =
+                    formatTime(song.currentTime);
+
+            });
+
+
+            /*
+                Clicking progress bar
+            */
+
+            progress.addEventListener("input", function() {
+
+                if (song.duration) {
+
+                    song.currentTime =
+                        (progress.value / 100) * song.duration;
+
+                }
+
+            });
+
+
+            /*
+                When song ends
+            */
+
+            song.addEventListener("ended", function() {
+
+                progress.value = 0;
+
+                currentTime.textContent = "0:00";
+
+                const button =
+                    document.querySelector(
+                        `.play-button[onclick*="${song.id}"]`
+                    );
+
+                if (button) {
+                    button.innerHTML = "▶";
+                }
+
+            });
+
+        });
+
+    
+    </script>
+</html>
